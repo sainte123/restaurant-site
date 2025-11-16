@@ -1,0 +1,40 @@
+img{
+    height: 300px;
+    width: 30%;
+    border-radius: 80px;
+}
+
+div{
+    font-size: 3rem;
+    text-align: center;
+    
+
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+p{
+    text-align: center;
+    font-size: 1,5rem;
+}
+.p{
+    text-transform: uppercase;
+    font-size: 1,5rem;
+    text-align: center;
+
+}
+
+
+     
+
+
+
+
+    
+
+

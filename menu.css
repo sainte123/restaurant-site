@@ -1,0 +1,975 @@
+/* menu.css - Styles spécifiques à la page menu */
+
+/* Page Header */
+.menu-header {
+    background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(66, 1, 1, 0.9)),
+                url('../images/Poulet1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0 80px;
+    margin-top: 110px;
+    height: 500px;
+}
+
+.menu-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-gold);
+}
+
+.menu-header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Menu Categories Navigation */
+.menu-categories {
+    background: var(--white);
+    padding: 0;
+    border-bottom: 2px solid var(--border-light);
+    position: sticky;
+    top: 110px;
+    z-index: 100;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0;
+}
+
+.category-tab {
+    background: var(--light-bg);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dark);
+    margin: 10px 5px;
+}
+
+.category-tab:hover {
+    background: var(--primary-red);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.category-tab.active {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+.category-tab i {
+    font-size: 1.1rem;
+}
+
+/* Menu Content */
+.menu-content {
+    padding: 60px 0;
+    background: var(--light-bg);
+}
+
+.menu-category {
+    display: none;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.menu-category.active {
+    display: block;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+}
+
+.category-description {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Menu Items Grid */
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.menu-item {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.item-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: var(--transition);
+}
+
+.menu-item:hover .item-image img {
+    transform: scale(1.1);
+}
+
+.item-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--secondary-gold);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.item-content {
+    padding: 25px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.item-header h3 {
+    color: var(--primary-red);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    flex: 1;
+}
+
+.item-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-left: 15px;
+}
+
+.item-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.item-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--light-bg);
+    color: var(--text-dark);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tag-veggie {
+    background: #4CAF50;
+    color: var(--white);
+}
+
+.tag-spicy {
+    background: #FF6B6B;
+    color: var(--white);
+}
+
+/* Item Details & Options */
+.item-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-light);
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.item-options {
+    margin-top: 15px;
+}
+
+.item-options h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.options-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.option {
+    background: var(--light-bg);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+/* Sides Section */
+.sides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.side-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.side-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.side-content h3 {
+    color: var(--primary-red);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.side-content p {
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.side-price {
+    font-weight: bold;
+    color: var(--primary-red);
+    font-size: 1.1rem;
+}
+
+/* Sauces Section */
+.sauces-section {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.sauces-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sauces-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.sauce-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.sauce-item:last-child {
+    border-bottom: none;
+}
+
+/* Drinks Section */
+.drinks-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.drinks-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-gold);
+    padding-bottom: 10px;
+}
+
+.drinks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.drink-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.drink-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.drink-info h4 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.drink-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.drink-price {
+    font-weight: bold;
+    color: var(--primary-red);
+    font-size: 1.2rem;
+}
+
+/* CTA Section */
+.menu-cta {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-gold);
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* CTA Section - Suite */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-buttons .btn-primary {
+    background: var(--secondary-gold);
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.cta-buttons .btn-primary:hover {
+    background: #E6B800;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+/* Menu Special Offers */
+.special-offers {
+    background: var(--light-bg);
+    padding: 60px 0;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.offer-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.offer-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.offer-content {
+    padding: 25px;
+}
+
+.offer-content h3 {
+    color: var(--primary-red);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.offer-content p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.offer-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.new-price {
+    color: var(--primary-red);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Menu Dietary Info */
+.dietary-info {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-top: 40px;
+}
+
+.dietary-info h3 {
+    color: var(--primary-red);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dietary-tags {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dietary-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: var(--light-bg);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.dietary-tag i {
+    color: var(--secondary-gold);
+}
+
+/* Menu Allergens */
+.allergens-info {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-light);
+}
+
+.allergens-info h4 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.allergens-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.allergen-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Menu Seasonal Specials */
+.seasonal-specials {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.seasonal-specials h2 {
+    color: var(--secondary-gold);
+    margin-bottom: 10px;
+}
+
+.seasonal-badge {
+    background: var(--secondary-gold);
+    color: var(--text-dark);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Menu Download Section */
+.menu-download {
+    background: var(--light-bg);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.download-content h2 {
+    color: var(--primary-red);
+    margin-bottom: 15px;
+}
+
+.download-content p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: var(--primary-red);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.download-btn:hover {
+    background: var(--dark-red);
+    transform: translateY(-3px);
+}
+
+.download-btn.pdf {
+    background: var(--accent-brown);
+}
+
+.download-btn.pdf:hover {
+    background: #7a3d10;
+}
+
+/* Menu Nutritional Info */
+.nutritional-info {
+    background: var(--white);
+    padding: 60px 0;
+}
+
+.nutritional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.nutritional-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--light-bg);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.nutritional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.nutritional-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.nutritional-card h3 {
+    color: var(--primary-red);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.nutritional-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Menu Responsive Adjustments */
+@media (max-width: 1200px) {
+    .menu-items-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .offers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 1040px) {
+    .category-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .category-tab {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .dietary-tags {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-header {
+        padding: 100px 0 60px;
+        margin-top: 130px;
+    }
+    
+    .menu-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-categories {
+        top: 130px;
+    }
+    
+    .menu-items-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .item-price {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sides-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sauces-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nutritional-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .category-tabs {
+        gap: 5px;
+    }
+    
+    .category-tab {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .category-tab i {
+        font-size: 1rem;
+    }
+    
+    .drinks-grid {
+        gap: 10px;
+    }
+    
+    .drink-item {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-header h1 {
+        font-size: 2rem;
+    }
+    
+    .category-title {
+        font-size: 2rem;
+    }
+    
+    .menu-items-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .item-content {
+        padding: 20px;
+    }
+    
+    .item-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .item-price {
+        font-size: 1.3rem;
+    }
+    
+    .offer-content {
+        padding: 20px;
+    }
+    
+    .dietary-info {
+        padding: 25px;
+    }
+    
+    .dietary-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Menu Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.menu-item:nth-child(odd) {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.menu-item:nth-child(even) {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.special-offers .offer-card {
+    animation: pulse 2s infinite;
+}
+
+/* Menu Loading States */
+.menu-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--light-bg);
+    border-top: 5px solid var(--primary-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Menu Print Styles */
+@media print {
+    .header,
+    .menu-categories,
+    .menu-cta,
+    .footer {
+        display: none;
+    }
+    
+    .menu-content {
+        padding: 20px 0;
+    }
+    
+    .menu-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .category-title {
+        color: #000 !important;
+    }
+}
+
+/* Menu Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .menu-item,
+    .category-tab,
+    .btn {
+        transition: none;
+    }
+    
+    .menu-item:hover,
+    .category-tab:hover,
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Menu High Contrast Mode */
+@media (prefers-contrast: high) {
+    .menu-item {
+        border: 2px solid var(--text-dark);
+    }
+    
+    .category-tab {
+        border: 2px solid var(--text-dark);
+    }
+    
+    .item-price {
+        color: var(--text-dark);
+    }
+}
